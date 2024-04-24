@@ -24,23 +24,25 @@ function toggleplayer(n){
 }
 function playerMoved(num) {
     const square = document.getElementsByClassName('square')[num];
-    if (square.innerText == "") {
-        square.innerText = XorO;
-        console.log(XorO + " took square " + num)
-        if(XorO === "X"){
-            xlist.push(num)
-            XorO = "O"
-        }
-        else{
-            olist.push(num)
-            XorO = "X"
-        }
-        // if (checkGame() == true){
-        //     win();
-        // }
-        checkGame()
-        if(playermode == 1 && XorO == "O"){
-            computerMove();
+    if (gameOngoing == true){
+        if (square.innerText == "") {
+            square.innerText = XorO;
+            console.log(XorO + " took square " + num)
+            if(XorO === "X"){
+                xlist.push(num)
+                XorO = "O"
+            }
+            else{
+                olist.push(num)
+                XorO = "X"
+            }
+            // if (checkGame() == true){
+            //     win();
+            // }
+            checkGame()
+            if(playermode == 1 && XorO == "O"){
+                computerMove();
+            }
         }
     }
 }
