@@ -107,8 +107,8 @@ a.skip-main:focus, a.skip-main:active {
 
   .message{
     grid-row: 1;
-    grid-column: 2 3;
   }
+
   .player-mode-buttons{
     grid-row: 2;
   }
